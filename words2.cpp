@@ -33,7 +33,7 @@ namespace lab04_2
         if(used == capacity){
         	int new_capacity = used*2;
         	string *ndata;
-			ndata = new string[newCapacity];
+			ndata = new string[new_capacity];
         	 copy(data, data + used, data2);
         	delete [] data;
         	data = ndata;
@@ -77,4 +77,4 @@ namespace lab04_2
 	copy(source.data, source.data + used, data);
     }	
 
-    
+}    
