@@ -34,7 +34,7 @@ namespace lab04_2
         	int new_capacity = used*2;
         	string *ndata;
 			ndata = new string[new_capacity];
-        	copy(data, data + used, data);
+        	copy(data, data + used, ndata);
         	delete [] data;
         	data = ndata;
         	capacity = new_capacity;
