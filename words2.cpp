@@ -1,6 +1,6 @@
 // words2.cpp - implements class Words
 // (dynamic array version)
-//Peizhen Tong  date: 10/25/2018
+//wenhao song  date: 10/25/2018
 
 #include <cassert>
 #include <string>
