@@ -26,9 +26,9 @@ namespace lab04_2
         used = source.size();
         capacity = source.get_capacity;*/
       capacity = source.capacity;
-      data = new string[source.capacity];
-      used = source.used;
-      copy(source.data, source.data+used.data);
+      data = new std::string[source.capacity];
+      used = source.size;
+      copy(source.data, source.data+used, data);
     }
 
     void Words::append(string word) {
