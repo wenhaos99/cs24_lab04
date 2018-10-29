@@ -4,7 +4,6 @@
 
 #include <cassert>
 #include <string>
-#include <iostream>
 #include <algorithm>
 #include <cstdlib>
 #include "words2.h"
@@ -25,22 +24,31 @@ namespace lab04_2
         data[i]=source[i];
         used = source.size();
         capacity = source.get_capacity;*/
-      capacity = source.capacity;
-      data = new std::string[source.capacity];
-      used = source.size;
+     
+      data = new std::string[source.get_capacity()];
+      capacity = source.get_capacity();
+      used = source.size();
       copy(source.data, source.data+used, data);
     }
 
-    void Words::append(string word) {
+    void Words::append(std::string word) {
       if (used == capacity){
         capacity = used * 2;
-        string *newdata = new string[2*used];
+      }
+      std::string=data_new;
+      data_new = new std::string[capacity];
+      for (int i =0; i <used;  i++){
+          data_new[i] = data[i];
+      }
+          /*string *newdata = new string[2*used];
         copy(data, used+data, newdata);
         delete [] data;
         data = newdata
       }
-        data[used] = word;
-        used++;
+        */
+        data_new[used] = word;
+        data = data_new
+        ++used;
     }
 
     string& Words::operator[] (unsigned int index) {
@@ -63,18 +71,18 @@ namespace lab04_2
     Words::~Words() {
         delete [] data;
     }
-  void Words::operator=(const Words & source){
+  Words& Words::operator=(const Words & source){
     string *newdata;
     if (this == &source){
-      return;
+      return *this;
     }
     if (capacity != source.capacity){
-      newdata = new string[string.capacity];
-      capacity = source.capacity;
+      newdata = new std::string[string.get_capacity()];
+      capacity = source.get_capacity();
       delete[] data;
       data = newdata;
     }
-    used = source.used;
+    used = source.size();
     copy(source.data, used + source.data, data);
   }
 }
