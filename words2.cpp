@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
-#include <cstlib>
+#include <cstdlib>
 #include "words2.h"
 
 using namespace std;
