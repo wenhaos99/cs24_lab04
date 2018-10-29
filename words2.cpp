@@ -63,7 +63,7 @@ namespace lab04_2
     Words::~Words() {
         delete [] data;
     }
-  void Words::operator=(cost Words & source){
+  void Words::operator=(const Words & source){
     string *newdata;
     if (this == &source){
       return;
