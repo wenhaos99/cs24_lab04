@@ -65,7 +65,7 @@ namespace lab04_2
     Words& Words::operator=(const Words & source){
 	string *new_data;
 	if (this == &source){
-		return;
+		return *this;
     }
 	if (capacity != source.capacity){
 	new_data = new string[source.capacity];
